@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OBSIOMA</title>
+  <title>DVSY Fashion</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -294,9 +294,7 @@
 
     .popup-box{
       width:90%;
-      max-width:700px;
-      max-height:90vh;
-      overflow-y:auto;
+      max-width:500px;
       background:#161616;
       padding:40px;
       border-radius:20px;
@@ -309,15 +307,9 @@
       font-size:35px;
     }
 
-    .popup-box h3{
-      margin-top:20px;
-      margin-bottom:10px;
-    }
-
     .popup-box p{
       color:#ccc;
       line-height:1.8;
-      margin-bottom:15px;
     }
 
     .popup-box button{
@@ -381,42 +373,38 @@
 
     <div class="navbar">
 
-      <div class="logo">OBSIOMA</div>
+      <div class="logo">DVSY</div>
 
       <div class="nav-links">
 
-        <button onclick="showAboutMe()">
-          ABOUT ME
+        <button onclick="showPopupContent('DESIGNERS',
+        'Discover talented independent designers from around the world.')">
+          DESIGNERS
         </button>
 
-        <button onclick="showPopupContent(
-        'COLLABS',
-        'Explore collaborations, projects, and creative works.')">
+        <button onclick="showPopupContent('COLLABS',
+        'Explore our latest collaborations with artists and luxury brands.')">
           COLLABS
         </button>
 
-        <button onclick="showPopupContent(
-        'EVENTS',
-        'View upcoming activities, events, and memorable experiences.')">
+        <button onclick="showPopupContent('EVENTS',
+        'View upcoming fashion events, runway shows, and exhibitions.')">
           EVENTS
         </button>
 
-        <button onclick="showPopupContent(
-        'BLOG',
-        'Read blogs, reflections, and personal stories.')">
+        <button onclick="showPopupContent('BLOG',
+        'Read fashion stories, style tips, and luxury lifestyle articles.')">
           BLOG
         </button>
 
-        <button onclick="showPopupContent(
-        'CARD',
-        'Explore achievements, skills, and personal milestones.')">
+        <button onclick="showPopupContent('CARD',
+        'Get exclusive membership benefits and premium access.')">
           CARD
         </button>
 
         <button class="contact-btn"
-        onclick="showPopupContent(
-        'GET IN TOUCH',
-        'Email: irishmayobsioma2222@gmail.com <br><br> Address: Poblacion, Malitbog, Bukidnon')">
+        onclick="showPopupContent('GET IN TOUCH',
+        'Email: dvsy@email.com <br><br> Phone: +63 912 345 6789 <br><br> Instagram: @dvsyfashion')">
           GET IN TOUCH
         </button>
 
@@ -432,14 +420,17 @@
 
       <div class="hero-content">
 
-        <h1>IRISH MAY<br>A. OBSIOMA</h1>
+        <h1>DESIGN<br>& FREEDOM</h1>
 
         <p>
-          Comfortable with Solitude.
+          Explore Independent Style by Embracing Uniqueness
+          with Our Exclusive Designer Apparel.
         </p>
 
-        <button onclick="showAboutMe()">
-          ABOUT ME
+        <button onclick="showPopupContent(
+        'DESIGN & FREEDOM',
+        'DVSY celebrates fashion freedom and individuality. We connect people with premium fashion and unique designer collections.')">
+          LEARN MORE
         </button>
 
       </div>
@@ -455,28 +446,13 @@
         <h3>INDEPENDENCY</h3>
 
         <p>
-          Learning to grow independently while embracing personal experiences.
+          Explore the creativity of independent designers
+          from around the globe.
         </p>
 
         <button onclick="showPopupContent(
         'INDEPENDENCY',
-        'Being independent helped me become stronger, wiser, and more responsible in life.')">
-          ABOUT ME →
-        </button>
-
-      </div>
-
-      <div class="feature-box">
-
-        <h3>UNIQUENESS</h3>
-
-        <p>
-          Appreciating individuality and embracing my own personality.
-        </p>
-
-        <button onclick="showPopupContent(
-        'UNIQUENESS',
-        'Every person has a unique story, and I value mine with confidence and positivity.')">
+        'Independent designers bring creativity, originality, and innovation into modern fashion.')">
           LEARN MORE →
         </button>
 
@@ -484,15 +460,16 @@
 
       <div class="feature-box">
 
-        <h3>GROWTH</h3>
+        <h3>UNIQUITY</h3>
 
         <p>
-          Improving myself through experiences, challenges, and learning.
+          Discover the charm of unique pieces
+          that stand out effortlessly.
         </p>
 
         <button onclick="showPopupContent(
-        'GROWTH',
-        'Personal growth comes from reflection, patience, and continuous learning.')">
+        'UNIQUITY',
+        'Exclusive fashion pieces crafted to help you express your individuality.')">
           LEARN MORE →
         </button>
 
@@ -500,17 +477,171 @@
 
       <div class="feature-box">
 
-        <h3>PEACE</h3>
+        <h3>QUALITY</h3>
 
         <p>
-          Finding comfort and peace through solitude and self-reflection.
+          Experience unparalleled craftsmanship
+          and attention to detail.
         </p>
 
         <button onclick="showPopupContent(
-        'PEACE',
-        'Peace begins when we learn to appreciate silence, healing, and our own company.')">
+        'QUALITY',
+        'Premium materials and expert craftsmanship ensure timeless quality.')">
           LEARN MORE →
         </button>
+
+      </div>
+
+      <div class="feature-box">
+
+        <h3>SUSTAINABILITY</h3>
+
+        <p>
+          Embrace eco-conscious fashion choices
+          without compromising style.
+        </p>
+
+        <button onclick="showPopupContent(
+        'SUSTAINABILITY',
+        'We support sustainable fashion and environmentally friendly practices.')">
+          LEARN MORE →
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div>
+        <h2>150+</h2>
+        <p>DESIGNERS</p>
+      </div>
+
+      <div>
+        <h2>500+</h2>
+        <p>CLIENTS</p>
+      </div>
+
+      <div>
+        <h2>20K+</h2>
+        <p>MASTERPIECES</p>
+      </div>
+
+      <div>
+        <h2>50+</h2>
+        <p>EVENTS</p>
+      </div>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <div class="about">
+
+      <div class="about-card">
+
+        <h1>WHERE FASHION MEETS FREEDOM</h1>
+
+        <p>
+          We believe that fashion should be an expression of individuality.
+          We encourage creativity and originality in every item we offer,
+          presenting customers with exclusive collections from independent designers.
+        </p>
+
+      </div>
+
+      <div class="about-image">
+
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200">
+
+      </div>
+
+    </div>
+
+    <!-- ADVANTAGES -->
+
+    <h1 class="advantages-title">OUR ADVANTAGES</h1>
+
+    <div class="advantages">
+
+      <div class="adv-image">
+
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
+
+      </div>
+
+      <div class="adv-list">
+
+        <div class="adv-card">
+
+          <h3>INDEPENDENT DESIGNERS</h3>
+
+          <p>
+            Our platform celebrates the ingenuity
+            of independent designers.
+          </p>
+
+          <button onclick="showPopupContent(
+          'INDEPENDENT DESIGNERS',
+          'Meet creative designers shaping the future of luxury fashion.')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>EXCLUSIVE & UNIQUITY</h3>
+
+          <p>
+            Curated collections showcasing
+            exclusive and elegant fashion pieces.
+          </p>
+
+          <button onclick="showPopupContent(
+          'EXCLUSIVE & UNIQUITY',
+          'Explore luxury collections designed for individuality and elegance.')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>HIGH QUALITY</h3>
+
+          <p>
+            Superior craftsmanship and premium
+            materials in every design.
+          </p>
+
+          <button onclick="showPopupContent(
+          'HIGH QUALITY',
+          'Experience durable and timeless premium fashion craftsmanship.')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>ECO-FRIENDLY</h3>
+
+          <p>
+            Sustainable fashion created with
+            environmentally friendly practices.
+          </p>
+
+          <button onclick="showPopupContent(
+          'ECO-FRIENDLY',
+          'Support sustainable luxury fashion with eco-conscious materials.')">
+            EXPLORE
+          </button>
+
+        </div>
 
       </div>
 
@@ -533,45 +664,6 @@
   </div>
 
   <script>
-
-    function showAboutMe(){
-
-      document.getElementById("popup-content").innerHTML = `
-
-        <h2>ABOUT ME</h2>
-
-        <p>
-          Hi! I am <b>IRISH MAY ANDO OBSIOMA</b>, a 21-year-old student currently taking up 
-          <b>Bachelor of Science in Information Technology</b>. I live in 
-          <b>Poblacion, Malitbog, Bukidnon</b>. I am a cheerful and positive person who enjoys simple moments and values personal growth. 
-          I like spending time reflecting on life, learning from experiences, and maintaining a peaceful mindset.
-        </p>
-
-        <p>
-          I am careful with my actions and decisions because I always think about the possible consequences before doing something.
-          I believe that being thoughtful, responsible, and understanding helps me become a better person every day.
-        </p>
-
-        <h3>Personal Information</h3>
-
-        <p><b>Name:</b> IRISH MAY ANDO OBSIOMA</p>
-        <p><b>Age:</b> 21 Years Old</p>
-        <p><b>Course:</b> Bachelor of Science in Information Technology</p>
-        <p><b>Email:</b> irishmayobsioma2222@gmail.com</p>
-        <p><b>Address:</b> Poblacion, Malitbog, Bukidnon</p>
-
-        <h3>Quotes</h3>
-
-        <p>
-          "I found peace in solitude, where silence speaks louder than noise.
-          Being alone does not mean being lonely; sometimes, it is where healing and self-discovery begin.
-          Comfortable with solitude, because in my own company, I learn to grow, reflect, and become stronger."
-        </p>
-
-      `;
-
-      document.getElementById("popup").style.display = "flex";
-    }
 
     function showPopupContent(title, text){
 

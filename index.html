@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DVSY Fashion Website</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat',sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#572525,#b65b5b);
+      min-height:100vh;
+      padding:40px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+    }
+
+    .container{
+      width:100%;
+      max-width:1400px;
+      background:#050505;
+      border-radius:18px;
+      overflow:hidden;
+      padding:15px;
+      box-shadow:0 0 40px rgba(0,0,0,.5);
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:15px;
+      padding:10px;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links button{
+      background:#161616;
+      border:none;
+      color:white;
+      padding:10px 16px;
+      cursor:pointer;
+      border-radius:5px;
+      font-size:12px;
+      transition:.3s;
+    }
+
+    .nav-links button:hover{
+      background:#d76752;
+      transform:translateY(-2px);
+    }
+
+    .contact-btn{
+      background:#d76752 !important;
+      color:black !important;
+      font-weight:700;
+    }
+
+    /* HERO */
+
+    .hero{
+      position:relative;
+      height:650px;
+      border-radius:12px;
+      overflow:hidden;
+      margin-bottom:15px;
+    }
+
+    .hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(.6);
+    }
+
+    .hero-content{
+      position:absolute;
+      top:50%;
+      left:60px;
+      transform:translateY(-50%);
+      max-width:700px;
+    }
+
+    .hero-content h1{
+      font-size:100px;
+      font-weight:300;
+      line-height:1;
+      letter-spacing:4px;
+    }
+
+    .hero-content p{
+      margin-top:25px;
+      font-size:18px;
+      line-height:1.7;
+      color:#ddd;
+    }
+
+    .learn-btn{
+      margin-top:30px;
+      background:transparent;
+      border:1px solid white;
+      color:white;
+      padding:14px 30px;
+      cursor:pointer;
+      border-radius:40px;
+      transition:.3s;
+    }
+
+    .learn-btn:hover{
+      background:white;
+      color:black;
+    }
+
+    /* FEATURE BOXES */
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+      margin-bottom:20px;
+    }
+
+    .feature-box{
+      background:#1a1a1d;
+      padding:35px 25px;
+      border-radius:10px;
+      transition:.3s;
+    }
+
+    .feature-box:hover{
+      transform:translateY(-5px);
+      background:#222;
+    }
+
+    .feature-box h3{
+      margin-bottom:15px;
+      font-size:20px;
+    }
+
+    .feature-box p{
+      color:#aaa;
+      line-height:1.6;
+      margin-bottom:20px;
+    }
+
+    .feature-box button{
+      background:none;
+      border:none;
+      color:white;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      text-align:center;
+      padding:40px 0;
+      border-top:1px solid #222;
+      border-bottom:1px solid #222;
+      margin-bottom:25px;
+    }
+
+    .stats h2{
+      font-size:50px;
+      font-weight:600;
+    }
+
+    .stats p{
+      color:#aaa;
+      margin-top:10px;
+    }
+
+    /* ABOUT */
+
+    .about-section{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-bottom:40px;
+    }
+
+    .about-card{
+      background:#1a1a1d;
+      border-radius:10px;
+      padding:40px;
+    }
+
+    .about-card h1{
+      font-size:55px;
+      margin-bottom:25px;
+    }
+
+    .about-card p{
+      color:#bbb;
+      line-height:1.8;
+    }
+
+    .about-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    /* ADVANTAGES */
+
+    .advantages-title{
+      font-size:55px;
+      margin-bottom:25px;
+    }
+
+    .advantages{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .adv-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    .adv-list{
+      display:grid;
+      gap:20px;
+    }
+
+    .adv-card{
+      background:#1a1a1d;
+      padding:35px;
+      border-radius:10px;
+    }
+
+    .adv-card h3{
+      margin-bottom:15px;
+      font-size:25px;
+    }
+
+    .adv-card p{
+      color:#bbb;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    .adv-card button{
+      background:none;
+      border:1px solid #555;
+      color:white;
+      padding:12px 25px;
+      border-radius:30px;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .adv-card button:hover{
+      background:#d76752;
+      border:none;
+    }
+
+    @media(max-width:1000px){
+
+      .features,
+      .stats,
+      .about-section,
+      .advantages{
+        grid-template-columns:1fr;
+      }
+
+      .hero-content h1{
+        font-size:60px;
+      }
+
+      .advantages-title{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">DVSY</div>
+
+      <div class="nav-links">
+
+        <button onclick="showMessage('Designers Page')">DESIGNERS</button>
+
+        <button onclick="showMessage('Collabs Page')">COLLABS</button>
+
+        <button onclick="showMessage('Events Page')">EVENTS</button>
+
+        <button onclick="showMessage('Blog Page')">BLOG</button>
+
+        <button onclick="showMessage('Card Page')">CARD</button>
+
+        <button class="contact-btn"
+        onclick="contactUs()">GET IN TOUCH</button>
+
+      </div>
+
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600">
+
+      <div class="hero-content">
+
+        <h1>DESIGN<br>& FREEDOM</h1>
+
+        <p>
+          Explore Independent Style by Embracing Uniqueness
+          with Our Exclusive Designer Apparel.
+        </p>
+
+        <button class="learn-btn"
+        onclick="learnMore()">
+          LEARN MORE
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+
+      <div class="feature-box">
+        <h3>INDEPENDENCY</h3>
+
+        <p>
+          Explore the creativity of independent designers
+          from around the globe.
+        </p>
+
+        <button onclick="featureInfo('Independency')">
+          LEARN MORE →
+        </button>
+      </div>
+
+      <div class="feature-box">
+        <h3>UNIQUITY</h3>
+
+        <p>
+          Discover the charm of unique pieces that stand out effortlessly.
+        </p>
+
+        <button onclick="featureInfo('Uniquity')">
+          LEARN MORE →
+        </button>
+      </div>
+
+      <div class="feature-box">
+        <h3>QUALITY</h3>
+
+        <p>
+          Experience unparalleled craftsmanship and attention to detail.
+        </p>
+
+        <button onclick="featureInfo('Quality')">
+          LEARN MORE →
+        </button>
+      </div>
+
+      <div class="feature-box">
+        <h3>SUSTAINABILITY</h3>
+
+        <p>
+          Embrace eco-conscious fashion choices without compromising style.
+        </p>
+
+        <button onclick="featureInfo('Sustainability')">
+          LEARN MORE →
+        </button>
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+
+      <div>
+        <h2>150+</h2>
+        <p>DESIGNERS</p>
+      </div>
+
+      <div>
+        <h2>500+</h2>
+        <p>CLIENTS</p>
+      </div>
+
+      <div>
+        <h2>20K+</h2>
+        <p>MASTERPIECES</p>
+      </div>
+
+      <div>
+        <h2>50+</h2>
+        <p>EVENTS</p>
+      </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about-section">
+
+      <div class="about-card">
+
+        <h1>WHERE FASHION MEETS FREEDOM</h1>
+
+        <p>
+          We believe that fashion should be an expression of individuality.
+          We encourage creativity and originality in every item we offer,
+          presenting customers with exclusive collections from independent designers.
+        </p>
+
+      </div>
+
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200">
+      </div>
+
+    </div>
+
+    <!-- ADVANTAGES -->
+    <h1 class="advantages-title">OUR ADVANTAGES</h1>
+
+    <div class="advantages">
+
+      <div class="adv-image">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
+      </div>
+
+      <div class="adv-list">
+
+        <div class="adv-card">
+
+          <h3>INDEPENDENT DESIGNERS</h3>
+
+          <p>
+            Our platform celebrates the ingenuity of independent designers,
+            offering collections that reflect creativity and innovation.
+          </p>
+
+          <button onclick="exploreNow('Independent Designers')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>EXCLUSIVE & UNIQUITY</h3>
+
+          <p>
+            Indulge in curated collections showcasing exclusive pieces
+            with unique stories and charm.
+          </p>
+
+          <button onclick="exploreNow('Exclusive Fashion')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>HIGH QUALITY</h3>
+
+          <p>
+            Embrace superior craftsmanship with meticulously curated,
+            enduring high-quality garments.
+          </p>
+
+          <button onclick="exploreNow('High Quality')">
+            EXPLORE
+          </button>
+
+        </div>
+
+        <div class="adv-card">
+
+          <h3>ECO-FRIENDLY</h3>
+
+          <p>
+            Join our commitment to sustainability with eco-friendly
+            fashion options crafted with care.
+          </p>
+
+          <button onclick="exploreNow('Eco-Friendly')">
+            EXPLORE
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function showMessage(page){
+      alert("Opening " + page);
+    }
+
+    function contactUs(){
+      window.location.href = "mailto:your@email.com";
+    }
+
+    function learnMore(){
+      alert("Welcome to DVSY Fashion!");
+    }
+
+    function featureInfo(feature){
+      alert("You clicked " + feature);
+    }
+
+    function exploreNow(topic){
+      alert("Exploring " + topic);
+    }
+
+  </script>
+
+</body>
+</html>
